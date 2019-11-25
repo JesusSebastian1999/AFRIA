@@ -9,7 +9,7 @@ import { DocumentReference } from "../../lib/fireAPI.js";
 const id = getURLSearchParam("id");
 /** @type {HTMLOutputElement} */
 const título = document.querySelector("#título");
-const figure = document.querySelector("figure");
+const figure = document.querySelector("#figura");
 const imagen_m = document.querySelector("#img");
 /** @type {HTMLInputElement} */
 const pregunta = document.querySelector("#pregunta");
@@ -24,13 +24,13 @@ const respuesta_c = document.querySelector("#respuesta_c");
 /** @type {MiSelect} */
 const tema = document.querySelector("#tema");
 /** @type {HTMLInputElement} */
-const img = document.querySelector("#imagen");
+const imagen_agrega = document.querySelector("#imagen");
  
 if (id) {
-    img.required = false;
+    imagen_agrega.required = false;
   } else {
     figure.hidden = true;
-    img.required = true;
+    imagen_agrega.required = true;
   }
  
 const dao = creaDaoQuiz();
@@ -88,7 +88,7 @@ class CtrlQuiz extends CtrlEdicion {
     const doc = await super.agregaModelo(modelo);
 
     await this.dao.collection.doc(doc.id).update({
-      IMAGEN_P: await subeFile(img, doc.id)
+      IMAGEN_P: await subeFile(imagen_agrega, doc.id)
     });
 
     return doc;
@@ -104,9 +104,9 @@ class CtrlQuiz extends CtrlEdicion {
 
     await super.actualizaModelo(modelo);
 
-    if (fileSeleccionado(img)) {
+    if (fileSeleccionado(imagen_agrega)) {
       await this.dao.collection.doc(id).update({
-        IMAGEN_P: await subeFile(img, id)
+        IMAGEN_P: await subeFile(imagen_agrega, id)
       });
     }
   }
