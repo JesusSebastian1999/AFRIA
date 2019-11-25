@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Color de la barra de navegación de Chrome. -->
+<meta name="theme-color" content="#000000">
+ 
+<!-- Configuración de la Web App Chrome y Microsoft Store. -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Configuración para del acceso directo en Windows Edge/IE -->
+<!-- Icono -->
+<meta name="msapplication-TileImage" content="icono.png">
+<!-- Color de tile. -->
+<meta name="msapplication-TileColor" content="#8a0000">
+
+<!-- Configuración para Web Clip en Safari. -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" sizes="2048x2048" href="icono.png">
+<link rel="apple-touch-startup-image" sizes="2048x2048" href="icono.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<script type="module" src="lib/registraServiceWorker.js"></script>
+<script src="js/lib/polycustom.js"></script>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ÁFRIA</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <script type="module" src="lib/mi-navegacion.js"></script>
+
+    <script src="/__/firebase/6.0.2/firebase-app.js"></script>
+   <script src="/__/firebase/6.0.2/firebase-auth.js"></script>
+   <script src="/__/firebase/6.0.2/firebase-firestore.js"></script>
+   <script src="/__/firebase/init.js"></script>
+
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon ">
+                    <img class="img-fluid" src="img/afriaV2.png" alt="ÁFRIA">
+                </div>
+                <div class="sidebar-brand-text mx-3">Afria <br><sup>Quiz Geografía</sup></div>
+            </a>
+            <hr>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-search"></i>
+                    <span>Descubrir</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="html/registro.html">Registrate</a>
+                        <a class="collapse-item" href="html/login.html">Iniciar Sesión</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="instrucciones.html">
+                    <i class="fas fa-atlas"></i>
+                    <span>Instrucciones Para La Profesora Esmeralda</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            
+        <nav is="mi-navegacion"></nav>
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+            
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <figure class="figure">
+                        <img src="img/codes.png" class="figure-img img-fluid rounded" alt="Responsive image" width="200px">
+                        <figcaption class="figure-caption text-right"></figcaption>
+                    </figure>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">¡Prueba uno de nuestros cuestionarios!</h1>
+
+                    </div>
+                    <br>
+                    <!-- Cuestionario -->
+                    <div class="text-center">
+                        <div class="card text-center text-black bg-success mb-4" style="max-width: 100rem;">
+                            <div class="card-header">
+                                <h1> Pregunta 1 / 20</h1>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 98%"></div>
+                            </div>
+                            <div class="card-body" style="max-width: 90rem;">
+                                <h2 class="card-title text-white">¿Qué es el espacio Geográfico?</h2>
+                            </div>
+                        </div>
+                        <!-- Respuestas-->
+
+                        <div class="card">
+                            <div class="card text-center" style="max-width: 80rem;"><button type="button" class="btn btn-outline-secondary"><h3>Es el espacio específico en la tierra donde el ser humano desarrolla sus actividades</h3></button></div>
+                            <br>
+                            <div class="card text-center" style="max-width: 80rem;"><button type="button" class="btn btn-outline-secondary"><h3>Es el entorno en el que se desenvuelven los grupos humanos en su interrelación</h3></button></div>
+                            <br>
+                            <div class="card text-center" style="max-width: 80rem;"><button type="button" class="btn btn-outline-secondary"><h3>Organizados por las sociedades que se sucedieron en los sucesivos periodos históricos</h3></button></div>
+                            <br>
+                            <div class="card text-center" style="max-width: 80rem;"><button type="button" class="btn btn-outline-secondary"><h3>Es el objeto de estudio de la geografía y se requiere de una visión transdiciplinaria</h3></button></div>
+                            <br>
+                        </div>
+                        <br>
+                        <!-- Paginacion del Cuestionario-->
+                        <div>
+                            <ul class="pagination pagination-lg">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#">&laquo;</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">4</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">5</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">&raquo;</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Finzaliza el Cuestionario -->
+
+                    </div>
+
+
+                    <div class="text-center">
+                        <img src="img/multiplesG.jpg" class="img-fluid" alt="Responsive image">
+                    </div>
+
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2019</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
