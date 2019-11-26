@@ -247,7 +247,7 @@ export function copiaAttr(element, atributo, atributoNuevo, predeterminado) {
  }
  /** Muestra la página inicial del sitio. */
 export function inicio() {
-  location.href = "index.html";
+  location.href = "../../index.html";
 }
 
  

@@ -7,7 +7,7 @@ import { Auth } from "./util.js";
  
 /** Datos utilizados de un usuario.
  * @typedef {Object} InfoUsuario
- * @property {string[]} ROL_ID referencias a los roles asignados.
+ * @property {string} ROL_ID referencias a los roles asignados.
  * @property {string} EMAIL_UP email del usuario preparado para búsqueda.
  * (UNQUE) */
  
@@ -16,7 +16,7 @@ import { Auth } from "./util.js";
  * @property {string} email email del usuario.
  * @property {string} displayName nombre registrado en la cuenta.
  * @property {string} photoURL url del avatar registrado en la cuenta.
- * @property {Readonly<String[]>} roles referencias a los roles asignados.
+ * @property {String} roles referencias a los roles asignados.
 */
 /** Constante que permite acceder directamente al objeto firestore.
  * @type {Auth} */
@@ -39,7 +39,7 @@ export async function verifica(usuarioAuth) {
       email: usuarioAuth.email,
       displayName: usuarioAuth.displayName,
       photoURL: usuarioAuth.photoURL,
-      roles: modelo.ROL_ID || []
+      roles: modelo.ROL_ID
     };
   } else {
     return {
@@ -47,7 +47,7 @@ export async function verifica(usuarioAuth) {
       email: usuarioAuth.email,
       displayName: usuarioAuth.displayName,
       photoURL: usuarioAuth.photoURL,
-      roles: []
+      roles: 
     };
   }
 }

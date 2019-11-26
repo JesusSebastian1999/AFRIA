@@ -14,13 +14,13 @@ customElements.define("mi-navegacion", class extends HTMLElement {
           // Usuario aceptado.
           const roles =
             Object.freeze(new Set((await verifica(usuarioAuth)).roles));
-          if (roles.has("Administrador")) {
+          if (roles.has("Admin")) {
             this.innerHTML += /* html */
               `<li class="nav-item">
               <a class="nav-link" href="html/administrador/index.html"><i class="fas fa-user"></i>Administrador</a>
              </li>`;
           }
-          if (roles.has("Profesore")) {
+          if (roles.has("Profes")) {
             this.innerHTML += /* html */
               `<li class="nav-item">
               <a class="nav-link" href="html/profesor/index.html"><i class="fas fa-user"></i>Profesor</a>

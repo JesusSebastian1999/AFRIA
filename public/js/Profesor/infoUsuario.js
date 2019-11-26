@@ -8,7 +8,7 @@ import { DocumentReference } from "../lib/fireAPI.js";
  * @property {string} APELLIDO_MATERNO apellido materno del usuario.
  * @property {string} EMAIL Email del usuario.
  * @property {DocumentReference} GRUPO_ID referencia(foranea) al grupo del usuario.
- * @property {DocumentReference} ROL_ID referencia(foranea) al rol del usuario.
+ * @property {string} ROL_ID referencia(foranea) al rol del usuario.
  * @property {string} EMAIL_UP Email del usuario preparado para búsqueda.
  * (UNQUE) */
  

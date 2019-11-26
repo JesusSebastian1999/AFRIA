@@ -67,15 +67,11 @@ customElements.define("herramientas-detalle", class extends HTMLElement {
              <i class="fas fa-arrow-left"></i>
              <span>Regresar Al Inicio</span></a>
      </li>
-     <p>
-     <input class="nav-item nav-link" type="button" name="terminaSesion" accesskey="T"
-       value="Terminar Sesión">
-    </p>
      <!-- Sidebar Toggler (Sidebar) -->
      <div class="text-center d-none d-md-inline">
          <button class="rounded-circle border-0" id="sidebarToggle"></button>
      </div>
-     
+     <nav is="mi-navegacion"></nav>
 
  </ul>
  
