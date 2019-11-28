@@ -7,7 +7,7 @@ customElements.define("mi-navegacion", class extends HTMLElement {
     auth.onAuthStateChanged(usuarioAuth =>
       catchas(async () => {
         this.innerHTML = /* html */ `<li class="nav-item">
-        <a class="nav-link" href="../../index.html"><i class="fas fa-user"></i>Inicio</a>
+        <a class="nav-link" href="../../index.html"><i class="fas fa-home"></i>Inicio</a>
        </li>`;
         if (usuarioAuth && usuarioAuth.email) {
           // Usuario aceptado.
@@ -26,7 +26,8 @@ customElements.define("mi-navegacion", class extends HTMLElement {
              </li>`;
           }
           this.innerHTML += /*html*/
-            `<button id="terminarSesión" type="button">
+            `<button class="btn btn-google btn-block" id="terminarSesión" type="button">
+            <i class="fab fa-google fa-fw"></i>
               Terminar Sesión
             </button>`;
           const terminarSesión = document.getElementById("terminarSesión")
@@ -34,7 +35,7 @@ customElements.define("mi-navegacion", class extends HTMLElement {
         } else {
           // Usuario rechazado.
           this.innerHTML += /* html */
-            `<button id="iniciarSesión" type="button">Iniciar Sesión</button>`;
+            `<button class="btn btn-google btn-block" id="iniciarSesión" type="button"><i class="fab fa-google fa-fw"></i>Iniciar Sesión</button>`;
           const iniciarSesión = document.getElementById("iniciarSesión")
           iniciarSesión.addEventListener("click", iniciaSesión);
         }
