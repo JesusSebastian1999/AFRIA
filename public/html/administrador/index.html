@@ -22,10 +22,13 @@
     <!-- Custom styles for this template-->
     <link href="../../css/sb-admin-2.css" rel="stylesheet">
     <script type="module" src="../../js/Administrador/ctrlMenuAdmin.js"></script>
+    <script type="module" src="../../lib/mi-navegacion.js"></script>
+    <script type="module" src="../../js/Login_Muestra.js"></script>
     <script src="/__/firebase/6.0.2/firebase-app.js"></script>
     <script src="/__/firebase/6.0.2/firebase-auth.js"></script>
     <script src="/__/firebase/6.0.2/firebase-firestore.js"></script>
     <script src="/__/firebase/init.js"></script> 
+    <script src="/__/firebase/6.0.2/firebase-auth.js"></script>
 </head>
 
 <body id="page-top">
@@ -91,8 +94,8 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
-                                <img class="img-profile rounded-circle" src="">
+                                <output id="nombre" class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</output>
+                                <img class="img-profile rounded-circle" id="icono" alt="Imagen">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -208,6 +211,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../../js/sb-admin-2.min.js"></script>
+  
 
 </body>
 

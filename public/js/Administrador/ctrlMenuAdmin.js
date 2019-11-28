@@ -36,7 +36,7 @@ customElements.define("herramientas-detalle", class extends HTMLElement {
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-
+            <nav is="mi-navegacion"></nav>
 
         </ul>
      `;

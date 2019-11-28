@@ -40,7 +40,7 @@ class CtrlUsuario extends CtrlEdicion {
     apellido_paterno.value = modelo.APELLIDO_PATERNO || "";
     apellido_materno.value = modelo.APELLIDO_MATERNO || "";
     email.value = modelo.EMAIL || "";
-    rol.valor = modelo.ROL_ID;
+    rol.value = modelo.ROL_ID;
   }       
   /** Recupera la información capturada.
    * @override
@@ -55,7 +55,7 @@ class CtrlUsuario extends CtrlEdicion {
       APELLIDO_PATERNO,
       APELLIDO_MATERNO,
       EMAIL,
-      ROL_ID: rol.valor,
+      ROL_ID: rol.value,
       EMAIL_UP: preparaParaBúsqueda(EMAIL)
     };
   }

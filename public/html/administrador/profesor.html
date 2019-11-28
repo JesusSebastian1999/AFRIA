@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
         <meta name="theme-color" content="#000000">
@@ -29,6 +29,8 @@
     <script src="/__/firebase/init.js"></script>
    <script src="/__/firebase/6.0.2/firebase-auth.js"></script>
     <script type="module" src="../../js/Administrador/ctrlMenuAdmin.js"></script>
+    <script type="module" src="../../js/Login_Muestra.js"></script>
+    <script type="module" src="../../lib/mi-navegacion.js"></script>
     <script type="module" src="../../js/cmp/herramientas-opciones.js"></script>
     <script type="module" src="../../js/Administrador/ctrl/CtrlProfesor.js"></script>
     <script type="module" src="../../js/cmp/mi-select.js"></script>
@@ -96,8 +98,8 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Utonio</span>
-                                <img class="img-profile rounded-circle" src="">
+                                <output id="nombre" class="mr-2 d-none d-lg-inline text-gray-600 small">Utonio</output>
+                                <img class="img-profile rounded-circle" id="icono" alt="Imagen">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

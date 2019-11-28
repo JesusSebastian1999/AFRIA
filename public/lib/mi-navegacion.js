@@ -7,7 +7,7 @@ customElements.define("mi-navegacion", class extends HTMLElement {
     auth.onAuthStateChanged(usuarioAuth =>
       catchas(async () => {
         this.innerHTML = /* html */ `<li class="nav-item">
-        <a class="nav-link" href="index.html"><i class="fas fa-user"></i>Inicio</a>
+        <a class="nav-link" href="../../index.html"><i class="fas fa-user"></i>Inicio</a>
        </li>`;
         if (usuarioAuth && usuarioAuth.email) {
           // Usuario aceptado.
