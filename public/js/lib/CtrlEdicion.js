@@ -92,6 +92,16 @@ export class CtrlEdicion {
    * @param {Object} modelo
    * @returns {Promise<DocumentReference>} referencia a los datos registrados.*/
   async agregaModelo(modelo) {
+
+    Swal.fire({
+      type: 'success',
+      title: 'Loading...',
+      text: 'Se Ha Registrado Correctamente',
+      showConfirmButton: false,
+      closeOnClickOutside: false,
+      closeOnEsc: false
+  })
+
     return this.dao.agrega(modelo);
   }
  
@@ -99,6 +109,14 @@ export class CtrlEdicion {
    * @param {Object} modelo
    * @returns {Promise<void>} */
   async actualizaModelo(modelo) {
+    swal.fire({
+      title: "Loading...",
+      text: "Please wait",
+      icon: "/images/loading.gif",
+      showConfirmButton: false,
+      closeOnClickOutside: false,
+      closeOnEsc: false
+    });
     return this.dao.actualiza(this.id, modelo);
   }
  

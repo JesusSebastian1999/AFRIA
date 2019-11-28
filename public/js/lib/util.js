@@ -15,7 +15,11 @@ export function getURLSearchParam(name) {
  * @param {Error} e instancia que contiene el error. */
 export function error(e) {
   console.error(e);
-  alert(e.message);
+  Swal.fire({
+    type: 'error',
+    title: '¡Error!',
+    text: e.message 
+  })
 }
  
 /** Asegura que una condición se cumpla, o en caso contrario lanza un Error. * 

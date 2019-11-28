@@ -25,6 +25,7 @@ const respuesta_c = document.querySelector("#respuesta_c");
 const tema = document.querySelector("#tema");
 /** @type {HTMLInputElement} */
 const imagen_agrega = document.querySelector("#imagen");
+var n;
  
 if (id) {
     imagen_agrega.required = false;
@@ -56,6 +57,7 @@ class CtrlQuiz extends CtrlEdicion {
     respuesta_c.value = modelo.RESPUESTA_C || "";
     tema.valor = modelo.TEMA_ID;
     imagen_m.src = modelo.IMAGEN_P || "";
+    n = infos(await collection("QUIZ").get()).length;
   }       
   /** Recupera la información capturada.
    * @override
@@ -66,12 +68,14 @@ class CtrlQuiz extends CtrlEdicion {
     const RESPUESTA_A = respuesta_a.value.trim();
     const RESPUESTA_B = respuesta_b.value.trim();
     const RESPUESTA_C = respuesta_c.value.trim();
+    const NAME = `respuesta${n}`;
     return {
       PREGUNTA,
       RESPUESTA_CORRECTA,
       RESPUESTA_A,
       RESPUESTA_B,
       RESPUESTA_C,
+      NAME,
       TEMA_ID: tema.valor,
       PREGUNTA_UP: preparaParaBúsqueda(PREGUNTA)
     };
