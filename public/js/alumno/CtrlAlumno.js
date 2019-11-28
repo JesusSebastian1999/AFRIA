@@ -1,12 +1,17 @@
 import { MiSelect } from "../cmp/mi-select.js";
 import { CtrlEditRespuesta } from "../lib/CtrlEditRespuesta.js";
 import { DocumentReference } from "../lib/fireAPI.js";
-import { collection, infos } from "../lib/util.js";
+import { collection, infos,getURLSearchParam } from "../lib/util.js";
 import { creaDaoRespuesta } from "./DaoAlumno.js";
 import { cod, sinScript } from "../lib/util.js";
 
 const dao = creaDaoRespuesta();
+const id = getURLSearchParam("id");
 
+
+
+
+console.log(id);
 class CtrlAlumno extends CtrlEditRespuesta {
 
     /** Muestra los datos del modelo.
@@ -72,9 +77,10 @@ class CtrlAlumno extends CtrlEditRespuesta {
                         </tbody>`;
 
         tabla.innerHTML = sinScript(tablaResultados);
-
+        const ID_USU = id;
         return {
             RESULTADO,
+            ID_USU,
             PROMEDIO
         };
     }
