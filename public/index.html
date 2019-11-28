@@ -72,41 +72,18 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-search"></i>
-                    <span>Descubrir</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="html/registro.html">Registrate</a>
-                        <a class="collapse-item" href="html/login.html">Iniciar Sesión</a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <li class="nav-item">
-                <a class="nav-link" href="instrucciones.html">
-                    <i class="fas fa-atlas"></i>
-                    <span>Instrucciones Para La Profesora Esmeralda</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
             
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
             
             <nav is="mi-navegacion"></nav>
 
@@ -164,73 +141,163 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                    <h1 class="h3 mb-4 text-gray-800">Temas</h1>
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">¡Prueba uno de nuestros cuestionarios!</h1>
-
-                    </div>
-                    <br>
-                    <!-- Cuestionario -->
-                    <div class="text-center">
-                        <div class="card text-center text-black bg-success mb-4" style="max-width: 100rem;">
-                            <div class="card-header">
-                                <h1> Pregunta 1 / 20</h1>
+                    <div class="row">
+                        <!--bloque 1-->
+                        <div class="col-lg-6">
+                            <!-- Tema 1 -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#tema1">
+                                        El espacio Geografico y los mapas
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img src="../img/espacio G.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="tema1" tabindex="-1" role="dialog"
+                                        aria-labelledby="tituloTema1" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title text-success" id="tituloTema1">Introducción</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body text-justify border-left-primary">
+                                                        En el espacio geográfico los seres humanos hacemos nuestra vida y utilizamos todos aquellos recursos que nos provee el planeta para subsistir. En pocas palabras, cualquier lugar que habite, transforme o modifique el ser humano y obtenga algún beneficio económico, será parte del estudio de la Geografía. Entonces, el espacio geográfico es el producto de las transformaciones que hacemos los humanos a lo largo del tiempo. El motivo, satisfacer las necesidades de alimentación, vestido, vivienda, trabajo y hasta diversión.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Fin Modal -->
+                                </div>
                             </div>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 98%"></div>
-                            </div>
-                            <div class="card-body" style="max-width: 90rem;">
-                                <h2 class="card-title text-white">¿Qué es el espacio Geográfico?</h2>
-                            </div>
-                        </div>
-                        <!-- Respuestas-->
+                            <!--  Fin Tema 1 -->
 
-                        <div class="card">
-                            <div class="card text-center" style="max-width: 80rem;"><button type="button" class="btn btn-outline-secondary"><h3>Es el espacio específico en la tierra donde el ser humano desarrolla sus actividades</h3></button></div>
-                            <br>
-                            <div class="card text-center" style="max-width: 80rem;"><button type="button" class="btn btn-outline-secondary"><h3>Es el entorno en el que se desenvuelven los grupos humanos en su interrelación</h3></button></div>
-                            <br>
-                            <div class="card text-center" style="max-width: 80rem;"><button type="button" class="btn btn-outline-secondary"><h3>Organizados por las sociedades que se sucedieron en los sucesivos periodos históricos</h3></button></div>
-                            <br>
-                            <div class="card text-center" style="max-width: 80rem;"><button type="button" class="btn btn-outline-secondary"><h3>Es el objeto de estudio de la geografía y se requiere de una visión transdiciplinaria</h3></button></div>
-                            <br>
+                            <!-- Tema 2 -->
+                            <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-info" data-toggle="modal"
+                                            data-target="#tema2">
+                                            EProyecciones cartograficas: cilindricas,conicas y azimutales
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img src="../img/cartografia.jpg" class="img-fluid" alt="Responsive image">
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="tema2" tabindex="-1" role="dialog"
+                                            aria-labelledby="tituloTema2" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title text-success" id="tituloTema2">Introducción</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-justify border-left-primary">
+                                                            Están diseñados para comunicar información específica por medio de recursos visuales como los colores, las formas, el tamaño, la textura, la orientación, etcétera. A diferencia de las fotografías aéreas o las imágenes satelitales, son representaciones no realistas de una porción o totalidad geográfica, la cual se suele dibujar a escala y agregarle una serie de coordenadas, los paralelos y los meridianos, para facilitar la búsqueda de puntos específicos como un continente, una ciudad o una isla.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Fin Modal -->
+                                    </div>
+                                </div>
+                                <!--  Fin Tema 2 -->
                         </div>
-                        <br>
-                        <!-- Paginacion del Cuestionario-->
-                        <div>
-                            <ul class="pagination pagination-lg">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#">&laquo;</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">5</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">&raquo;</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /Finzaliza el Cuestionario -->
+                        <!--fin bloque 1-->
 
+                        <!--bloque 2-->
+                        <div class="col-lg-6">
+                                <!-- Tema 1 -->
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                                            data-target="#tema3">
+                                            Recursos Naturales y preservacion del ambiente
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img src="../img/naturem.jpg" class="img-fluid" alt="Responsive image">
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="tema3" tabindex="-1" role="dialog"
+                                            aria-labelledby="tituloTema3" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title text-success" id="tituloTema3">Introducción</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body text-justify border-left-primary">
+                                                            Los recursos naturales son todos aquellos bienes disponibles en un territorio u océanos susceptibles de ser transformados y aprovechados por la sociedad. Los recursos naturales del suelo, subsuelo, aire y agua se distribuyen en diversas regiones de nuestro planeta. Debido a la importancia económica de los recursos naturales, es necesario utilizarlos en forma sustentable.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Fin Modal -->
+                                    </div>
+                                </div>
+                                <!--  Fin Tema 1 -->
+    
+                                <!-- Tema 2 -->
+                                <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                data-target="#tema4">
+                                                La dinamica de la tierra
+                                            </button>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <img src="../img/astronomia.jpg" class="img-fluid" alt="Responsive image">
+                                            </div>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="tema4" tabindex="-1" role="dialog"
+                                                aria-labelledby="tituloTema4" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title text-success" id="tituloTema4">Introducción</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body text-justify border-left-primary">
+                                                                La Tierra es un planeta dinámico, subdividido internamente en “capas” que interactúan dependiendo de la energía interna.Entre los procesos naturales que se manifiestan sobre la superficie están la actividad sísmica y volcánica que ha llamado siempre la atención de sus habitantes. ¿Por qué y cómo ocurren estos fenómenos? Conocer los procesos geológicos que dan lugar a estos cambios constantes nos dará la respuesta.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin Modal -->
+                                        </div>
+                                    </div>
+                                    <!--  Fin Tema 2 -->
+                            </div>
+                            <!--fin bloque 2-->
                     </div>
 
 
-                    <div class="text-center">
-                        <img src="img/multiplesG.jpg" class="img-fluid" alt="Responsive image">
-                    </div>
 
 
                 </div>

@@ -25,6 +25,12 @@ customElements.define("mi-navegacion", class extends HTMLElement {
               <a class="nav-link" href="../html/profesor/index.html"><i class="fas fa-user"></i>Profesores</a>
              </li>`;
           }
+          if (roles.has("U")) {
+            this.innerHTML += /* html */
+              `<li class="nav-item">
+              <a class="nav-link" href="../html/alumno/index.html"><i class="fas fa-user"></i>Alumno</a>
+             </li>`;
+          }
           this.innerHTML += /*html*/
             `<button class="btn btn-google btn-block" id="terminarSesión" type="button">
             <i class="fab fa-google fa-fw"></i>

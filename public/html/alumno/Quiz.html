@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -17,6 +17,14 @@
 
     <!-- Custom styles for this template-->
     <link href="../../css/sb-admin-2.css" rel="stylesheet">
+    <script src="/__/firebase/6.0.2/firebase-app.js"></script>
+    <script src="/__/firebase/6.0.2/firebase-auth.js"></script>
+    <script src="/__/firebase/6.0.2/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="/__/firebase/6.0.2/firebase-auth.js"></script>
+ 
+    <script type="module" src="../../js/Login_Muestra.js"></script>
+    <script type="module" src="../../lib/mi-navegacion.js"></script>
 
 </head>
 
@@ -40,26 +48,23 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        <i class="fas fa-atlas"></i>
-                        <span>Cuestionarios</span></a>
-                </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-atlas"></i>
+                    <span>Temas</span></a>
+            </li>
              
                 
                 <li class="nav-item active">
                         <a class="nav-link" href="Quiz.html">
                             <i class="fas fa-atlas"></i>
-                            <span>Quiz</span></a>
+                            <senenpan>Quiz</span></a>
                     </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-                </div> 
-
+                <nav is="mi-navegacion"></nav>
         </ul>
         <!-- End of Sidebar -->
 
@@ -163,8 +168,8 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                                <img class="img-profile rounded-circle" src="">
+                                <output id="nombre" class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</output>
+                                <img id="icono" alt="Imagen" class="img-profile rounded-circle" src="">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
